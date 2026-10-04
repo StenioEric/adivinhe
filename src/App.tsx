@@ -3,10 +3,14 @@ import styles from "./app.module.css"
 
 
 export default function App() {
+  function handleRestartGame() {
+    alert("Reinicar o jogo!")
+  }
+
   return (
     <div className={styles.container}>
       <main>
-        <Header/>
+        <Header current={5} max={10} onRestart={handleRestartGame} />
       </main>
     </div>
   );
